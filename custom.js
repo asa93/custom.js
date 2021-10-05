@@ -1,8 +1,12 @@
 // Functions
+
+
 console.log("test require", require("./include/carousel-" + "carousel-skins" + ".html") )
 
 function scrollbutton(){
-	if( $(window).scrollTop() >= $("#main-btn").offset().top ){
+	$("#main-btn .btn").removeClass("position-relative").addClass("position-fixed");
+	if( $(window).scrollTop() >= 0 //$("#main-btn").offset().top 
+	){
 		$("#main-btn .btn").removeClass("position-relative").addClass("position-fixed");
 	}else{
 		$("#main-btn .btn").removeClass("position-fixed").addClass("position-relative");
@@ -47,7 +51,7 @@ $(document).ready(function(){
 				if($(".tab-pane#" + category).hasClass("loaded")){
 					// nothing happen
 				}else{
-					$(".tab-pane#" + category).find(".carousel-inner").load("include/carousel-" + category + ".html");
+					$(".tab-pane#" + category).find(".carousel-inner").load(require("./include/carousel-" + "carousel-skins" + ".html") );
 					$(".tab-pane#" + category).addClass("loaded");
 				};
 
