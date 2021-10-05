@@ -1,4 +1,6 @@
 // Functions
+console.log("test require", require("./include"))
+
 function scrollbutton(){
 	if( $(window).scrollTop() >= $("#main-btn").offset().top ){
 		$("#main-btn .btn").removeClass("position-relative").addClass("position-fixed");
