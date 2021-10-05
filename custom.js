@@ -1,5 +1,5 @@
 // Functions
-console.log("test require", require("./include"))
+console.log("test require", require("./include/carousel-" + "carousel-skins" + ".html") )
 
 function scrollbutton(){
 	if( $(window).scrollTop() >= $("#main-btn").offset().top ){
